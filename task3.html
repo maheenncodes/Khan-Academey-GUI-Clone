@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        .header {
+        padding: 10px;
+        margin: 0;
+        font-size: 17px;
+        text-align: left;
+        color: white;
+        background-color: rgb(11, 33, 73);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+       top: 0;
+
+       }
+       #logo{
+
+        height: 40px;
+        padding: 0px;
+        margin-top: 0px;
+        margin-right: auto;
+        display: block;
+        margin-left: auto;
+       
+        
+
+       }
+       #header2 {
+        padding: 1px;
+        font-size: 17px;
+        text-align: left;
+        color: white;
+        background-color: rgb(11, 33, 73);
+        background: rgb(11, 33, 73);
+        margin-top: 0.1px;
+        height: 120px;
+        position:sticky
+
+       }
+       .container{
+            font-family: 'Arial';
+            background-color: rgb(247, 245, 245);
+            margin-top: 0;
+            
+        }
+        .body{
+            background-color: rgb(244, 243, 243);
+            
+
+        }
+        #website{
+            float: left;
+            color: #f2f2f2;
+            font-size: 17px;
+            padding: 12px;
+            text-decoration: none;
+
+        }
+        #a{
+
+            float: right;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+       
+        #dropdown {
+            font-size: 16px;  
+            border: none;
+            outline: none;
+            color: white;
+            align-items: center;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        #search{
+            height: 25px;
+            background-color: rgb(15, 37, 80);
+            border-radius: 0px;
+            border: none;
+            margin-top: 12px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        #header2-el{
+            padding: 0 10px 0px 20px;
+            display: flex;
+            flex-direction: column;
+            
+        }
+        h1{
+            font-size: 40px;
+            margin-top: 40px;
+            position: absolute;
+            margin-left: 50px;
+        }
+        #math{
+            font-size: 15px;
+            position: absolute;
+            margin-top: 25px;
+            color: rgb(159, 159, 158);
+            font-weight:600;
+            margin-left: 50px;
+        }
+        #leftCol {
+            position: sticky;
+            
+            margin-left: 60px;
+            width: 20%;
+            overflow: scroll;
+            top: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            padding-left: 10px;
+            background-color: white;
+            height: 650px;
+        }
+        .container2{
+            background-color: #fffcfc;
+            display: flex;
+        }
+        #rightCol{
+
+            width: 80%;
+            margin-right: 30px;
+            margin-left: 20px;
+
+        }
+        #card{
+            
+            background-color: white;
+            padding: 20px 20px 10px 10px;
+            margin-top: 20px;
+            border: 1px solid rgb(211, 208, 208);
+            border-radius: 2px 2px 2px 2px;
+            text-align: left;
+            
+            width: 80%;
+            
+            
+        }
+        #card-upper{
+            display: flex;
+        }
+        
+        hr{
+            border: -3px rgb(180, 176, 176);
+            width: 100%;
+            margin-top: 0px;
+        }
+        #num{
+            height:40px;
+            border-radius: 50%;
+        }
+        #cardtext-upper{
+          
+            position: relative;
+            top: -5px;
+            padding-left: 8px;
+            padding-top: 0px;
+            font-weight: 540;
+            
+            
+           
+        }
+        .card-lower{
+            flex-direction: column;
+            margin-top: 5px;
+            padding-top: -1px;
+        }
+        #cardtext-lower{
+            font-size: 14px;
+            color: grey;
+        }
+        #division{
+            display: flex;
+            
+        }
+        #footer{
+            background-color:rgb(11, 33, 73) ;
+            height: 570px;
+            margin-top: 20px;
+        }
+        #left-footer{
+            display: flex;
+            flex-direction: column;
+            padding-left: 100px;
+            left: 50px;
+            width: 30%;
+            margin-left: 20px;
+            font-size: 21px;
+            margin-top: 35px;
+            color: rgb(106, 122, 154);
+        }
+        #left-footer-a{
+            color: #f2f2f2;
+        }
+        #right-footer{
+            display: flex;
+            flex-direction: row;
+            float: left;
+            width: 70%;
+            margin-left: 70px;
+        }
+        #column-text{
+            display: flex;
+            flex-direction: column;
+            margin-top: 55px;
+            color: #f2f2f2;
+            padding-bottom: 15px;
+            font-size: 12px;
+            padding-left: 20px;
+            
+            
+        }
+        #text{
+            padding-bottom: 15px;
+            padding-left: 30px;
+        }
+        #text-head{
+            padding-bottom: 15px;
+            color:rgb(106, 122, 154);
+            padding-left: 30px;
+        }
+        #dropdown2{
+            font-size: 12px;  
+            border: none;
+            outline: none;
+            color: white;
+            align-items: center;
+            background-color: inherit;
+            font-family: inherit;
+            margin-top: -14px;
+            padding-left: 3px;
+            padding-top: -4px;
+        }
+        #flag{
+            height: 12px;
+            padding-left: 15px;
+            padding-top: 12px;
+        }
+        #divs-flag{
+            padding-left: 10px;
+        }
+        #icon{
+            
+            float: right;
+            
+            
+        }
+        #icon-img{
+            height: 25px;
+            float: right;
+            padding: 5px 8px;
+            
+        }
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+   
+</head>
+<body>
+    <div class="container">
+       
+        <div class="header">
+            <div style="display: flex;">
+                <select id="dropdown">
+                    <option value="Courses">Courses</option>               
+                </select>
+                <input id="search" type="text" placeholder="Search..">
+            </div>
+                 
+            <div >
+                <img id="logo" src="images.png">
+            </div>
+            
+            <div id="nav">
+                <a id = "a" href="">SignUp</a>
+                <a id = "a" href="">Login</a>
+                <a id = "a" href="">Donate</a>
+            </div>
+            
+        </div>
+        
+        <div id="header2">
+            <div id="header2-el">
+                <p id="math">MATH</p>
+                <h1>Math: pre-k -8th grade</h1>
+            </div>
+        </div>
+
+
+        <div class="container2">
+            <div id="leftCol">
+                <p style="font-weight: 550;color: rgb(46, 44, 44);">Course Summary</b></p>
+                <hr>
+                <p style="color: grey;">Early math review</p>
+                <p style="color: grey;">Kindergarten</p> 
+                <p style="color: grey;">1st Grade</p>
+                <p style="color: grey;">2nd Grade</p> 
+                <p style="color: grey;">3rd Grade</p> 
+                <p style="color: grey;">4th Grade</p> 
+                <p style="color: grey;">5th Grade</p> 
+                <p style="color: grey;">6th Grade</p> 
+                <p style="color: grey;">7th Grade</p>
+                <p style="color: grey;">8th Grade</p>  
+                <p style="color: grey;">1st Grade foundations (Eureka Math/EngageNY)</p> 
+                <p style="color: grey;">2nd Grade foundations (Eureka Math/EngageNY)</p> 
+                <p style="color: grey;">3rd Grade foundations (Eureka Math/EngageNY)</p> 
+                <p style="color: grey;">4th Grade foundations (Eureka Math/EngageNY)</p> 
+                <p style="color: grey;">5th Grade foundations (Eureka Math/EngageNY)</p> 
+                <p style="color: grey;">6th Grade foundations (Eureka Math/EngageNY)</p> 
+                <p style="color: grey;">7th Grade foundations (Eureka Math/EngageNY)</p> 
+                <p style="color: grey;">8th Grade foundations (Eureka Math/EngageNY)</p> 
+                   
+            </div>
+            <div id="rightCol">
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">Early Math Review</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">Kindergarten</p>
+                    </div>
+                    <hr>
+                    <div class="card-lower" >
+                        <p id="cardtext-lower">Counting and place value</p>
+                        <p id="cardtext-lower">Addition and subtraction</p>
+                        <p id="cardtext-lower">Measurement and geometry</p>
+                    </div>
+
+                </div>
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">1st Grade</p>
+                    </div>
+                    <hr>
+                    <div class="card-lower" >
+                        <p id="cardtext-lower">Counting and place value</p>
+                        <p id="cardtext-lower">Addition and subtraction</p>
+                        <p id="cardtext-lower">Measurement and geometry</p>
+                    </div>
+
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">2nd Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">3rd Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">4th Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">4th Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">5th Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">6th Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">7th Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">8th Grade</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">1st Grade foundations (Eureka Math/EngageNY)</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="card">
+                    <div id="card-upper">
+                         <img id="num" src="num.png">
+                         <p id="cardtext-upper">2nd Grade foundations (Eureka Math/EngageNY)</p>
+                    </div>
+                    <hr>
+                    <div id="division">
+                        <div class="card-lower" style="width: 50%;" >
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                        <div class="card-lower" style="width: 50%;">
+                            <p id="cardtext-lower">Counting and place value</p>
+                            <p id="cardtext-lower">Addition and subtraction</p>
+                            <p id="cardtext-lower">Measurement and geometry</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+        <div id="footer">
+            <div style="display: flex;">
+                <div id="left-footer">
+                     <p>Our mission is to provide a free, world-class education to anyone, anywhere.</p>
+                     <p>Khan Academy is a 501(c)(3) nonprofit organization. <a id="left-footer-a">Donate</a> or <a id="left-footer-a">volunteer</a> today!</p>
+                </div>
+
+                <div id="right-footer">
+
+                    <div id="column-text">
+                        <a id="text"><b>About</b></a>
+                        <a id="text">News</a>
+                        <a id="text">Impact</a>
+                        <a id="text">Our team</a>
+                        <a id="text">Our interns</a>
+                        <a id="text">Our content specialists</a>
+                        <a id="text">Our leadership</a>
+                        <a id="text">Our supporters</a>
+                        <a id="text">Our contributers</a>
+                        <a id="text">Our finances</a>
+                        <a id="text">Careers</a>
+                        <a id="text">Internship</a>
+                    </div>
+                    <div style="display:flex; flex-direction:column;">
+                        <div id="column-text" style="height: 40%;">
+                            <a id="text-head"><b>Contact</b></a>
+                            <a id="text">Help Center</a>
+                            <a id="text">Support Community</a>
+                            <a id="text">Share your story</a>
+                            <a id="text">Press</a>
+                        </div>
+                        <div id="column-text" style="padding-top: -20px; height: 60%;">
+                            <a id="text-head"><b>Download our apps</b></a>
+                            <a id="text">iOS app</a>
+                            <a id="text">Andriod app</a>
+                            
+
+                        </div>
+                    </div>
+                        
+                    <div>
+                        <div id="column-text">
+                            <a id="text-head"><b>Courses</b></a>
+                            <a id="text">Math: Pre-K -8th grade</a>
+                            <a id="text">Math: Get ready courses</a>
+                            <a id="text">Math: high school & college</a>
+                            <a id="text">Test prep</a>
+                            <a id="text">Our content specialists</a>
+                            <a id="text">Science</a>
+                            <a id="text">Computing</a>
+                            <a id="text">Arts & humanities</a>
+                            <a id="text">Economics</a>
+                            <a id="text">Reading & language arts</a>
+                            <a id="text">Life skilss</a>
+                        </div>
+                    </div>
+                </div>
+                   
+                    
+                
+                
+
+            </div>
+            <div style="display: flex; margin-left: 100px; ">
+                <p id="text-head" style="font-size: 12px;">Language</p>
+                <select id="dropdown2">
+                    <option style="color: black;" value="English">English</option> 
+                    <option style="color: black;" value="Urdu">Urdu</option>
+                    <option style="color: black;" value="Hindi">Hindi</option>                
+                </select>
+                
+            </div>
+            <div style="display: flex; flex-direction: row ;font-size: 12px; margin-left: 90px; margin-top: -19px; ">
+                <div id="divs-flag">
+                    <p id="text-head">Country</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <img id="flag"src="us.png">
+                    <p style="font-size: 12px; color: white; padding-left: 4px;">U.S</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <img id="flag"src="india.png">
+                    <p style="font-size: 12px; color: white; padding-left: 4px;">India</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <img id="flag"src="mexico.png">
+                    <p style="font-size: 12px; color: white; padding-left: 4px;">Mexico</p>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <img id="flag"src="brazil.png">
+                    <p style="font-size: 12px; color: white; padding-left: 4px;">Brazil</p>
+                </div>
+            </div>
+            <div>
+                <hr style="margin-left: 130px; margin-right: 20px; width: 84%; right: 130px;"> 
+            </div>
+            <div style="display: flex; flex-direction: row ;font-size: 12px; margin-left: 90px; margin-top: 0; ">
+
+                <div>
+
+                    <p id="text-head" style="font-size: 12px; margin-left: 10px; float: left;">© 2023 Khan Academy</p>
+                    <p id="text" style="font-size: 13px; color: white; padding-left: 15px; margin-top: 10px; float: left;">Terms of Use</p>
+                    <p id="text" style="font-size: 13px; color: white; padding-left: 15px; margin-top: 10px; float: left;">Privacy Policy</p>
+                    <p id="text" style="font-size: 13px; color: white; padding-left: 15px; margin-top: 10px; float: left;">Cookie Notice</p>
+                </div>
+               
+                <div style="margin-left: 705px; ">
+                    <img id="icon-img" src="insta.png">
+                    <img id="icon-img" src="twitter.png">
+                    <img id="icon-img" src="fb.png">
+                </div>
+               
+               
+                
+                
+            </div>
+
+        </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
